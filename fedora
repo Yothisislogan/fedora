@@ -1,3 +1,2 @@
-sudo dnf install -y qemu-user-static-aarch64
-sudo systemctl restart systemd-binfmt.service
-docker run --rm --platform linux/arm64 alpine:3.22 uname -m
+Complete!
+permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
