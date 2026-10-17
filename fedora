@@ -29,3 +29,26 @@ findmnt -t binfmt_misc
 cat /proc/sys/fs/binfmt_misc/status
 cat /proc/sys/fs/binfmt_misc/qemu-aarch64
 systemctl status systemd-binfmt.service --no-pager
+
+
+logan@fedora:~$ findmnt -t binfmt_misc
+cat /proc/sys/fs/binfmt_misc/status
+cat /proc/sys/fs/binfmt_misc/qemu-aarch64
+systemctl status systemd-binfmt.service --no-pager
+TARGET                   SOURCE      FSTYPE      OPTIONS
+/proc/sys/fs/binfmt_misc binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime
+enabled
+cat: /proc/sys/fs/binfmt_misc/qemu-aarch64: No such file or directory
+○ systemd-binfmt.service - Set Up Additional Binary Formats
+     Loaded: loaded (/usr/lib/systemd/system/systemd-binfmt.service; static)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─10-timeout-abort.conf
+     Active: inactive (dead)
+  Condition: start condition unmet at Fri 2026-09-25 21:00:23 EDT; 3 weeks 0 days ago
+       Docs: man:systemd-binfmt.service(8)
+             man:binfmt.d(5)
+             https://docs.kernel.org/admin-guide/binfmt-misc.html
+             https://systemd.io/API_FILE_SYSTEMS
+
+Sep 25 21:00:23 fedora systemd[1]: systemd-binfmt.service - Set Up Addition…met.
+Hint: Some lines were ellipsized, use -l to show in full.
