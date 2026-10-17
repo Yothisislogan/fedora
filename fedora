@@ -1,2 +1,3 @@
-Complete!
-permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+newgrp docker
+
+docker run --rm --platform linux/arm64 alpine:3.22 uname -m
