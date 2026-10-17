@@ -23,3 +23,9 @@ sudo usermod -aG docker "$USER"
 newgrp docker
 
 docker run --rm hello-world && ./run.sh
+
+
+findmnt -t binfmt_misc
+cat /proc/sys/fs/binfmt_misc/status
+cat /proc/sys/fs/binfmt_misc/qemu-aarch64
+systemctl status systemd-binfmt.service --no-pager
